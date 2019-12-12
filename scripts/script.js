@@ -15,7 +15,7 @@ function generateNewArray(size) {
     array.push(newNum)
     var div = document.createElement('div')
     div.className = "array-bar"
-    div.style.width = `${100.0 / size}%`
+    div.style.width = `${98.0 / size}%`
     div.style.height = `${(newNum / 1000) * 95}%`
     div.style.margin = 0
     // div.textContent = newNum
