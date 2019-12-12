@@ -1,0 +1,30 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#first {
+  height: 95%;
+  width: 0;
+  display: inline-block;
+  background-color: blue;
+}
+
+#parent {
+  position: absolute;
+  left: 10%;
+  /* bottom: 5%; */
+  top: 5%;
+  height: 95%;
+  width: 80%;
+}
+#my-range {
+  
+}
+
+.array-bar {
+  display: inline-block;
+  margin: 1px;
+  background-color: aquamarine;
+  max-height: 90%;
+}

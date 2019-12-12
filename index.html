@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+  <div id="parent">
+  </div>
+  <button id="generate" onclick="generateNewArray(100)">Generate new array</button>
+  <button id="bubble-sort" onclick="bubbleSort()">Bubble Sort</button>
+  <!-- <div class="slidecontainer"> -->
+  <input type="range" min="10" max="300" value="100" class="slider" id="my-range">
+
+
+  <script src="scripts/script.js"></script>
+  <script>
+    var slider = document.getElementById("my-range");
+    console.log(slider.value);
+    slider.oninput = function () {
+      console.log(slider.value);
+      generateNewArray(this.value)
+    }
+    
+  </script>
+</body>
+
+</html>
