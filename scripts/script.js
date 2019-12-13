@@ -31,19 +31,40 @@ function generateRandomNumber(lowerBound, upperBound) {
   return Math.floor(Math.random() * (upperBound - lowerBound) + lowerBound)
 }
 
-function bubbleSort() {
-  let array = globalArr
-
-  let temp, heightTemp;
+// function sort() {
   
-  for (let i = array.length; i > 0; i--) {
+// }
+
+function bubbleSort() {
+  
+  for (let i = globalArr.length; i > 0; i--) {
     for (let j = 0; j < i - 1; j++) {
-      if (array[j] > array[j + 1]) {
-        swap(array, j, j + 1)
+      if (globalArr[j] > globalArr[j + 1]) {
+        
+          swap(globalArr, j, j + 1)
+        
       }
     }
   }
-  console.log(array);
+  // console.log(globalArr);
+}
+
+
+
+function insertionSort() {
+  let htmlItems = document.getElementsByClassName('array-bar')
+  for (let i = 1; i < globalArr.length; i++) {
+    currentValue = globalArr[i]
+    for (j = i - 1; j >= 0 && globalArr[j] > currentValue ;j--) {
+
+      htmlItems[j + 1].style.height =  `${(globalArr[j] / 1100) * 100}%`
+      globalArr[j + 1] = globalArr[j]
+
+    }
+    htmlItems[j + 1].style.height = `${(currentValue / 1100) * 100}%`
+    globalArr[j + 1] = currentValue
+  }
+  console.log(globalArr);
 }
 
 function swap(array, i, j) {
